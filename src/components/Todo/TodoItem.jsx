@@ -1,5 +1,4 @@
 import styles from './TodoItem.module.scss';
-
 import { useState, useContext } from 'react';
 import { TodoContext } from '../../contexts/TodoContext';
 import { TodoForm } from './TodoForm';
@@ -8,13 +7,13 @@ import { convertDate } from '../../utils/DateUtils';
 
 export function TodoItem({ todo }) {
     // ** Consume
-    const sharedObj = useContext(TodoContext);
-    const editTodo = sharedObj.editTodo;
-    const deleteTodo = sharedObj.deleteTodo
+    const {editTodo,deleteTodo} = useContext(TodoContext);
+    // const editTodo = sharedObj.editTodo;
+    // const deleteTodo = sharedObj.deleteTodo
 
     // state
     const [isEdit, setIsEdit] = useState(false);
-
+ 
     const handleClickEditIcon = () => setIsEdit(true);
 
     const handleClickCheckBox = () => {

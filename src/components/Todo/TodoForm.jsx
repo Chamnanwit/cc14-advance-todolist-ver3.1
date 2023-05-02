@@ -17,9 +17,9 @@ TodoForm.propTypes = {
 
 export function TodoForm({ textConfirm, onSetShow, oldTodo }) {
     // Consumer : TodoContext
-    const sharedObj = useContext(TodoContext)
-    const addTodo = sharedObj.addTodo
-    const editTodo = sharedObj.editTodo;
+    const {addTodo,editTodo} = useContext(TodoContext)
+    // const addTodo = sharedObj.addTodo
+    // const editTodo = sharedObj.editTodo;
     
     // State
     const [task, setTask] = useState(oldTodo?.task || '');

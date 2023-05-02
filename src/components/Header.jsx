@@ -1,12 +1,16 @@
+import { useContext } from 'react';// *
+import { TodoContext } from '../contexts/TodoContext';// *
 import { FaHome,FaSearch } from 'react-icons/fa';
 import { useState } from 'react';
-export function Header({onChangeSearch}) {
+export function Header() {
+    const {searchTodo} = useContext(TodoContext);// *
+    //const searchTodo = sharedObj.searchTodo // *
 
     const [searchValue,setSearchValue] = useState('')
 
     const handleChange = (e) =>{
         setSearchValue(e.target.value)
-        onChangeSearch(e.target.value)
+        searchTodo(e.target.value) // *edit
     }
     return (
         <header className='header'>
@@ -14,7 +18,7 @@ export function Header({onChangeSearch}) {
             <span className='header__icon'>
                 <FaHome size={25} color='white' />
             </span>
-            <h1>Todoist-MooJobs.</h1>
+            <h1>Todoist-Pavit</h1>
             <div className='header__search__container'>
                 <span className='header__search__icon'>
                     <FaSearch/>
