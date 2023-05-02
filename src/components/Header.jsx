@@ -17,7 +17,7 @@ export function Header() {
             <span className='header__icon'>
                 <FaHome size={25} color='white' />
             </span>
-            <h1>Todoist-Pavit</h1>
+            <h1>Todoist-Jobs</h1>
             <div className='header__search__container'>
                 <span className='header__search__icon'>
                     <FaSearch />
