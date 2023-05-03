@@ -1,18 +1,13 @@
 import './App.scss';
-import { useState, useEffect } from 'react';
-import * as TodoAPIServices from '../services/todoServices'
-import { Header } from '../components/Header';
-import { SideBar } from '../components/SideBar';
-import { TodoContent } from '../components/Todo/TodoContent';
+import  TodoPage  from '../pages/TodoPage';
+import LoginPage from '../pages/LoginPage';
+import RegisterPage from '../pages/RegisterPage'
+import ProfilePage from '../pages/ProfilePage'
 
 function App() {
-    return (
-        <div className='container'>
-            <Header />
-            <SideBar  />
-            <TodoContent />
-        </div>
-    );
+    // return <TodoPage />;
+    return <LoginPage/>
+    // return <RegisterPage/>
 }
 
 export default App;
